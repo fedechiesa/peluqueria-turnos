@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TurnosPeluqueria.Data;
+using TurnosPeluqueria.Models;
 
 namespace TurnosPeluqueria
 {

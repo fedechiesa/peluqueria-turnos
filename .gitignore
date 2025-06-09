@@ -1,0 +1,35 @@
+﻿## Archivos y carpetas que se deben ignorar en un proyecto ASP.NET Core
+
+filecontentindex/
+# Archivos de usuario de Visual Studio
+.vscode/
+*.user
+*.suo
+
+# Archivos de compilación
+bin/
+obj/
+
+# Configuraciones temporales
+*.log
+*.tmp
+
+# Archivos de publicación
+wwwroot/dist/
+wwwroot/lib/
+
+# Secretos de usuario
+appsettings.Development.json
+secrets.json
+
+# Archivos de base de datos local
+*.db
+*.mdf
+*.ldf
+
+# Archivos de Entity Framework
+Migrations/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

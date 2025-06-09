@@ -170,3 +170,4 @@ C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\TurnosPeluqueria.pdb
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\TurnosPeluqueria.genruntimeconfig.cache
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\ref\TurnosPeluqueria.dll
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\TurnosPeluqueria.sourcelink.json

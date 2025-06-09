@@ -2,18 +2,30 @@
 {
     public class Cliente
     {
-        public int Id { get; set; }
+        private int Id { get; set; }
 
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        private string Nombre { get; set; }
+        private string Apellido { get; set; }
 
-        public string Telefono { get; set; }
+        private string Telefono { get; set; }
 
-        public string Email { get; set; }
+        private string Email { get; set; }
 
-        public string Password { get; set; }
+        private string Password { get; set; }
 
         // Relación con Turnos (opcional)
-        public List<Turno> Turnos { get; set; }
+        private List<Turno> Turnos { get; set; }
+
+
+        public List<Turno> ObtenerTurnosFuturos()
+        {
+            return Turnos.Where(t => t.FechaHora > DateTime.Now).ToList();
+        }
+
+        // Verificar si ya tiene un turno en cierta fecha
+        public bool TieneTurnoEnFecha(DateTime fecha)
+        {
+            return Turnos.Any(t => t.FechaHora == fecha);
+        }
     }
 }
