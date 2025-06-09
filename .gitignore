@@ -1,6 +1,7 @@
 ﻿## Archivos y carpetas que se deben ignorar en un proyecto ASP.NET Core
 
 filecontentindex/
+.vs/
 # Archivos de usuario de Visual Studio
 .vscode/
 *.user
