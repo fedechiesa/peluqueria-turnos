@@ -1,31 +1,37 @@
-﻿namespace TurnosPeluqueria.Models
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace TurnosPeluqueria.Models
 {
     public class Cliente
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
 
-        private string Nombre { get; set; }
-        private string Apellido { get; set; }
+        [Required]
+        public string Nombre { get; set; }
 
-        private string Telefono { get; set; }
+        [Required]
+        public string Apellido { get; set; }
 
-        private string Email { get; set; }
+        [Required]
+        [Phone]
+        public string Telefono { get; set; }
 
-        private string Password { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
 
-        // Relación con Turnos (opcional)
-        private List<Turno> Turnos { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
 
+        public List<Turno> Turnos { get; set; } = new();
 
-        public List<Turno> ObtenerTurnosFuturos()
-        {
-            return Turnos.Where(t => t.FechaHora > DateTime.Now).ToList();
-        }
+        public List<Turno> ObtenerTurnosFuturos() =>
+            Turnos?.Where(t => t.FechaHora > DateTime.Now).ToList() ?? new List<Turno>();
 
-        // Verificar si ya tiene un turno en cierta fecha
-        public bool TieneTurnoEnFecha(DateTime fecha)
-        {
-            return Turnos.Any(t => t.FechaHora == fecha);
-        }
+        public bool TieneTurnoEnFecha(DateTime fecha) =>
+            Turnos?.Any(t => t.FechaHora == fecha) ?? false;
     }
 }

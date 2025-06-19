@@ -9,12 +9,14 @@ namespace TurnosPeluqueria.Services
 {
     public class TurnoService
     {
-        private readonly AppDbContext _context;
+        private readonly TurnosContext _context;
 
-        public TurnoService(AppDbContext context)
+
+        public TurnoService(TurnosContext context)
         {
             _context = context;
         }
+
 
         // Crear un nuevo turno si no hay conflicto
         public bool CrearTurno(int clienteId, int servicioId, DateTime fechaHora)
