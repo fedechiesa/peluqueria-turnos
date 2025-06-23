@@ -15,8 +15,9 @@ namespace TurnosPeluqueria.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Reservar", "Cliente", new { area = "Cliente" });
         }
+
 
         public IActionResult Privacy()
         {

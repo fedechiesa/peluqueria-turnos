@@ -6,8 +6,9 @@ namespace TurnosPeluqueria.Controllers
 {
     public class AuthController : Controller
     {
+        
         private readonly TurnosContext _context;
-
+        
         public AuthController(TurnosContext context)
         {
             _context = context;
@@ -50,7 +51,7 @@ namespace TurnosPeluqueria.Controllers
         [HttpPost]
         public IActionResult Login(string email, string contraseña)
         {
-            var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Contraseña == contraseña);
+            var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Password == contraseña);
             if (cliente != null)
             {
                 HttpContext.Session.SetInt32("ClienteId", cliente.Id);

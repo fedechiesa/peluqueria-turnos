@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using TurnosPeluqueria.Data;
-using TurnosPeluqueria.Models;
 
 namespace TurnosPeluqueria
 {
@@ -38,8 +37,11 @@ namespace TurnosPeluqueria
             app.UseAuthorization();
 
             app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
 
             app.Run();
         }

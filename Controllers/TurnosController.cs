@@ -6,16 +6,18 @@ using TurnosPeluqueria.Models;
 
 namespace TurnosPeluqueria.Controllers
 {
-    public class TurnoesController : Controller
+    
+    public class TurnosController : Controller
     {
+        
         private readonly TurnosContext _context;
-
-        public TurnoesController(TurnosContext context)
+        
+        public TurnosController(TurnosContext context)
         {
             _context = context;
         }
 
-        // GET: Turnoes
+        // GET: Turnos
         public async Task<IActionResult> Index()
         {
             var turnosActivos = _context.Turnos
@@ -27,7 +29,7 @@ namespace TurnosPeluqueria.Controllers
             return View(await turnosActivos.ToListAsync());
         }
 
-        // GET: Turnoes/Details/5
+        // GET: 
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
@@ -43,7 +45,7 @@ namespace TurnosPeluqueria.Controllers
             return View(turno);
         }
 
-        // GET: Turnoes/Create
+        // GET: 
         public IActionResult Create()
         {
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido");
@@ -52,7 +54,7 @@ namespace TurnosPeluqueria.Controllers
             return View();
         }
 
-        // POST: Turnoes/Create
+        // POST: 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FechaHora,ClienteId,PeluqueroId,ServicioId,Estado")] Turno turno)
@@ -69,7 +71,7 @@ namespace TurnosPeluqueria.Controllers
             return View(turno);
         }
 
-        // GET: Turnoes/Edit/5
+        // GET: 
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -83,7 +85,7 @@ namespace TurnosPeluqueria.Controllers
             return View(turno);
         }
 
-        // POST: Turnoes/Edit/5
+        // POST: 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FechaHora,ClienteId,PeluqueroId,ServicioId,Estado")] Turno turno)
@@ -111,7 +113,7 @@ namespace TurnosPeluqueria.Controllers
             return View(turno);
         }
 
-        // GET: Turnoes/Delete/5
+        // GET: 
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -127,7 +129,7 @@ namespace TurnosPeluqueria.Controllers
             return View(turno);
         }
 
-        // POST: Turnoes/Delete/5 (Ahora se cancela en lugar de eliminar)
+        // POST: 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CancelarConfirmed(int id)
@@ -180,8 +182,7 @@ namespace TurnosPeluqueria.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public IActionResult Reservar([Bind("FechaHora,PeluqueroId,ServicioId")] Turno turno)
         {
             int? clienteId = HttpContext.Session.GetInt32("ClienteId");
