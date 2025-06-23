@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TurnosPeluqueria.Data;
@@ -22,27 +18,27 @@ namespace TurnosPeluqueria.Controllers
         // GET: Turnoes
         public async Task<IActionResult> Index()
         {
-            var turnosContext = _context.Turnos.Include(t => t.Cliente).Include(t => t.Peluquero).Include(t => t.Servicio);
-            return View(await turnosContext.ToListAsync());
+            var turnosActivos = _context.Turnos
+                .Include(t => t.Cliente)
+                .Include(t => t.Peluquero)
+                .Include(t => t.Servicio)
+                .Where(t => t.Estado != EstadoTurno.Cancelado);
+
+            return View(await turnosActivos.ToListAsync());
         }
 
         // GET: Turnoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var turno = await _context.Turnos
                 .Include(t => t.Cliente)
                 .Include(t => t.Peluquero)
                 .Include(t => t.Servicio)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (turno == null)
-            {
-                return NotFound();
-            }
+
+            if (turno == null) return NotFound();
 
             return View(turno);
         }
@@ -57,8 +53,6 @@ namespace TurnosPeluqueria.Controllers
         }
 
         // POST: Turnoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FechaHora,ClienteId,PeluqueroId,ServicioId,Estado")] Turno turno)
@@ -78,16 +72,11 @@ namespace TurnosPeluqueria.Controllers
         // GET: Turnoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var turno = await _context.Turnos.FindAsync(id);
-            if (turno == null)
-            {
-                return NotFound();
-            }
+            if (turno == null) return NotFound();
+
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", turno.ClienteId);
             ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Nombre", turno.PeluqueroId);
             ViewData["ServicioId"] = new SelectList(_context.Servicios, "Id", "Nombre", turno.ServicioId);
@@ -95,16 +84,11 @@ namespace TurnosPeluqueria.Controllers
         }
 
         // POST: Turnoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FechaHora,ClienteId,PeluqueroId,ServicioId,Estado")] Turno turno)
         {
-            if (id != turno.Id)
-            {
-                return NotFound();
-            }
+            if (id != turno.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -115,17 +99,12 @@ namespace TurnosPeluqueria.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TurnoExists(turno.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    if (!TurnoExists(turno.Id)) return NotFound();
+                    else throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", turno.ClienteId);
             ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Nombre", turno.PeluqueroId);
             ViewData["ServicioId"] = new SelectList(_context.Servicios, "Id", "Nombre", turno.ServicioId);
@@ -135,36 +114,30 @@ namespace TurnosPeluqueria.Controllers
         // GET: Turnoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var turno = await _context.Turnos
                 .Include(t => t.Cliente)
                 .Include(t => t.Peluquero)
                 .Include(t => t.Servicio)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (turno == null)
-            {
-                return NotFound();
-            }
+
+            if (turno == null) return NotFound();
 
             return View(turno);
         }
 
-        // POST: Turnoes/Delete/5
+        // POST: Turnoes/Delete/5 (Ahora se cancela en lugar de eliminar)
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> CancelarConfirmed(int id)
         {
             var turno = await _context.Turnos.FindAsync(id);
-            if (turno != null)
-            {
-                _context.Turnos.Remove(turno);
-            }
+            if (turno == null) return NotFound();
 
+            turno.Estado = EstadoTurno.Cancelado;
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -172,5 +145,81 @@ namespace TurnosPeluqueria.Controllers
         {
             return _context.Turnos.Any(e => e.Id == id);
         }
+
+        public IActionResult MisTurnos()
+        {
+            int? clienteId = HttpContext.Session.GetInt32("ClienteId");
+
+            if (clienteId == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
+            var misTurnos = _context.Turnos
+                .Include(t => t.Peluquero)
+                .Include(t => t.Servicio)
+                .Where(t => t.ClienteId == clienteId && t.Estado != EstadoTurno.Cancelado)
+                .OrderBy(t => t.FechaHora)
+                .ToList();
+
+            return View(misTurnos);
+        }
+
+        public IActionResult Reservar()
+        {
+            int? clienteId = HttpContext.Session.GetInt32("ClienteId");
+            if (clienteId == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
+            ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Nombre");
+            ViewData["ServicioId"] = new SelectList(_context.Servicios, "Id", "Nombre");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Reservar([Bind("FechaHora,PeluqueroId,ServicioId")] Turno turno)
+        {
+            int? clienteId = HttpContext.Session.GetInt32("ClienteId");
+            if (clienteId == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
+            // Validación: ¿ya hay un turno con este peluquero en esa fecha y hora?
+            bool ocupado = _context.Turnos.Any(t =>
+                t.PeluqueroId == turno.PeluqueroId &&
+                t.FechaHora == turno.FechaHora &&
+                t.Estado != EstadoTurno.Cancelado
+            );
+
+            if (ocupado)
+            {
+                ModelState.AddModelError("FechaHora", "El peluquero ya tiene un turno en ese horario.");
+            }
+
+            if (ModelState.IsValid)
+            {
+                turno.ClienteId = clienteId.Value;
+                turno.Estado = EstadoTurno.Pendiente;
+
+                _context.Turnos.Add(turno);
+                _context.SaveChanges();
+
+                return RedirectToAction("MisTurnos");
+            }
+
+            ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Nombre", turno.PeluqueroId);
+            ViewData["ServicioId"] = new SelectList(_context.Servicios, "Id", "Nombre", turno.ServicioId);
+            return View(turno);
+        }
+
+
+
     }
 }
+

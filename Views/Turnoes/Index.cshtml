@@ -1,59 +1,64 @@
 ﻿@model IEnumerable<TurnosPeluqueria.Models.Turno>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listado de Turnos";
 }
 
-<h1>Index</h1>
+<h1>Turnos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-success">Nuevo Turno</a>
 </p>
-<table class="table">
-    <thead>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaHora)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Peluquero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Servicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.FechaHora)</th>
+            <th>@Html.DisplayNameFor(model => model.Cliente)</th>
+            <th>@Html.DisplayNameFor(model => model.Peluquero)</th>
+            <th>@Html.DisplayNameFor(model => model.Servicio)</th>
+            <th>@Html.DisplayNameFor(model => model.Estado)</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaHora)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente.Apellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Peluquero.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Servicio.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FechaHora.ToString("g")</td>
+                <td>@item.Cliente.Apellido</td>
+                <td>@item.Peluquero.Nombre</td>
+                <td>@item.Servicio.Nombre</td>
+                <td>
+                    @switch (item.Estado)
+                    {
+                        case TurnosPeluqueria.Models.EstadoTurno.Pendiente:
+                            <span class="badge bg-warning text-dark">Pendiente</span>
+                            break;
+                        case TurnosPeluqueria.Models.EstadoTurno.Confirmado:
+                            <span class="badge bg-success">Confirmado</span>
+                            break;
+                        case TurnosPeluqueria.Models.EstadoTurno.Cancelado:
+                            <span class="badge bg-danger">Cancelado</span>
+                            break;
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalles</a>
+
+                    @if (item.Estado != TurnosPeluqueria.Models.EstadoTurno.Cancelado)
+                    {
+                        <form asp-action="Delete" method="post" asp-route-id="@item.Id" style="display:inline">
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Cancelar este turno?');">Cancelar</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Cancelado</span>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

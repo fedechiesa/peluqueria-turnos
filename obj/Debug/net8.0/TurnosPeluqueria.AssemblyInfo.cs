@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TurnosPeluqueria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d1daaeb4cdfa479f7cd9447b0e55157ab760e70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3a510d880c01bb8727a3c7a2a0ee20cc35c2935")]
 [assembly: System.Reflection.AssemblyProductAttribute("TurnosPeluqueria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TurnosPeluqueria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
