@@ -56,12 +56,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Cliente/ConfirmarTurno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDb25maXJtYXJUdXJuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Cliente/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Cliente/MisTurnos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxNaXNUdXJub3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Cliente/Reservar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxSZXNlcnZhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Cliente/SeleccionarPeluquero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxTZWxlY2Npb25hclBlbHVxdWVyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/coyo/ORT/Nuevas Tecnologias/TurnosPeluqueria/Views/Home/Index.cshtml]

@@ -1,0 +1,27 @@
+﻿@model List<TurnosPeluqueria.Models.Peluquero>
+
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Elegí tu peluquero</h2>
+
+    <div class="row justify-content-center">
+        @foreach (var peluquero in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow rounded-4">
+                    <img src="~/img/peluqueros/@peluquero.Imagen" class="card-img-top rounded-top-4" alt="@peluquero.Nombre">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@peluquero.Nombre</h5>
+                        <p class="text-muted text-center">Turnos disponibles</p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            @foreach (var horario in peluquero.HorariosDisponibles)
+                            {
+                                <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary">@horario</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

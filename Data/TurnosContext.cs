@@ -26,12 +26,12 @@ namespace TurnosPeluqueria.Data
                 .HasForeignKey(t => t.ClienteId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Relacionar Turno con Peluquero
-            modelBuilder.Entity<Turno>()
-                .HasOne(t => t.Peluquero)
-                .WithMany(p => p.Turnos)
-                .HasForeignKey(t => t.PeluqueroId)
-                .OnDelete(DeleteBehavior.Restrict);
+            // modelBuilder.Entity<Turno>()
+            //     .HasOne(t => t.Peluquero)
+            //     .WithMany(p => p.Turnos)
+            //     .HasForeignKey(t => t.PeluqueroId)
+            //     .OnDelete(DeleteBehavior.Restrict);
+
 
             // Relacionar Turno con Servicio
             modelBuilder.Entity<Turno>()

@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\wwwroot\\img\\peluqueros\\juan.png",
+      "PackagePath": "staticwebassets\\img\\peluqueros\\juan.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\wwwroot\\img\\peluqueros\\lucas.png",
+      "PackagePath": "staticwebassets\\img\\peluqueros\\lucas.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\wwwroot\\img\\peluqueros\\marta.png",
+      "PackagePath": "staticwebassets\\img\\peluqueros\\marta.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

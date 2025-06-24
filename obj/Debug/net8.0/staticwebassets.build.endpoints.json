@@ -249,6 +249,252 @@
       ]
     },
     {
+      "Route": "img/peluqueros/juan.73qmmagob9.png",
+      "AssetFile": "img/peluqueros/juan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1651"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k2s09q1EHwgVEfvaI+ITiWv3PeOwhYAjXRAduF+R5r8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:39:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73qmmagob9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-k2s09q1EHwgVEfvaI+ITiWv3PeOwhYAjXRAduF+R5r8="
+        },
+        {
+          "Name": "label",
+          "Value": "img/peluqueros/juan.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/peluqueros/juan.png",
+      "AssetFile": "img/peluqueros/juan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1651"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k2s09q1EHwgVEfvaI+ITiWv3PeOwhYAjXRAduF+R5r8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:39:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k2s09q1EHwgVEfvaI+ITiWv3PeOwhYAjXRAduF+R5r8="
+        }
+      ]
+    },
+    {
+      "Route": "img/peluqueros/lucas.217ertk9y9.png",
+      "AssetFile": "img/peluqueros/lucas.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2506"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:41:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "217ertk9y9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM="
+        },
+        {
+          "Name": "label",
+          "Value": "img/peluqueros/lucas.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/peluqueros/lucas.png",
+      "AssetFile": "img/peluqueros/lucas.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2506"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:41:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM="
+        }
+      ]
+    },
+    {
+      "Route": "img/peluqueros/marta.orab56gbjw.png",
+      "AssetFile": "img/peluqueros/marta.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vDcH5/BrmDLzG+hwk0N5ZwcMTXUsYXQtNuOuQmwMjUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:41:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "orab56gbjw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vDcH5/BrmDLzG+hwk0N5ZwcMTXUsYXQtNuOuQmwMjUA="
+        },
+        {
+          "Name": "label",
+          "Value": "img/peluqueros/marta.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/peluqueros/marta.png",
+      "AssetFile": "img/peluqueros/marta.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vDcH5/BrmDLzG+hwk0N5ZwcMTXUsYXQtNuOuQmwMjUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 15:41:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vDcH5/BrmDLzG+hwk0N5ZwcMTXUsYXQtNuOuQmwMjUA="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js",
       "Selectors": [],

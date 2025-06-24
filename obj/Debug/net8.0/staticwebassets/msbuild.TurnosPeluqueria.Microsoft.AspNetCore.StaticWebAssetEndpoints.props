@@ -24,6 +24,42 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 02:12:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/juan.73qmmagob9.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\juan.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"73qmmagob9"},{"Name":"integrity","Value":"sha256-k2s09q1EHwgVEfvaI\u002BITiWv3PeOwhYAjXRAduF\u002BR5r8="},{"Name":"label","Value":"_content/TurnosPeluqueria/img/peluqueros/juan.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1651"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022k2s09q1EHwgVEfvaI\u002BITiWv3PeOwhYAjXRAduF\u002BR5r8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:39:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/juan.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\juan.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-k2s09q1EHwgVEfvaI\u002BITiWv3PeOwhYAjXRAduF\u002BR5r8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1651"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022k2s09q1EHwgVEfvaI\u002BITiWv3PeOwhYAjXRAduF\u002BR5r8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:39:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/lucas.217ertk9y9.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\lucas.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"217ertk9y9"},{"Name":"integrity","Value":"sha256-6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM="},{"Name":"label","Value":"_content/TurnosPeluqueria/img/peluqueros/lucas.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2506"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:41:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/lucas.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\lucas.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2506"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226tVJcimqq774h5p0LoiIZYoUK6ZLPJTFwZMxtuVc9MM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:41:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/marta.orab56gbjw.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\marta.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"orab56gbjw"},{"Name":"integrity","Value":"sha256-vDcH5/BrmDLzG\u002Bhwk0N5ZwcMTXUsYXQtNuOuQmwMjUA="},{"Name":"label","Value":"_content/TurnosPeluqueria/img/peluqueros/marta.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2489"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vDcH5/BrmDLzG\u002Bhwk0N5ZwcMTXUsYXQtNuOuQmwMjUA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:41:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/img/peluqueros/marta.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\peluqueros\marta.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vDcH5/BrmDLzG\u002Bhwk0N5ZwcMTXUsYXQtNuOuQmwMjUA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2489"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vDcH5/BrmDLzG\u002Bhwk0N5ZwcMTXUsYXQtNuOuQmwMjUA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 24 Jun 2025 15:41:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TurnosPeluqueria/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
