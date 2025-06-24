@@ -1,17 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Turno Confirmado";
+    ViewData["Title"] = "Confirmar Turno";
 }
 
-<div class="container mt-5 text-center">
-    <div class="alert alert-success shadow rounded-4 p-5">
-        <h2 class="mb-3">✅ ¡Turno confirmado con éxito!</h2>
+<h2>Confirmar Turno</h2>
 
-        <p class="lead">
-            Peluquero: <strong>@ViewBag.Peluquero</strong><br />
-            Hora: <strong>@ViewBag.Hora</strong>
-        </p>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Peluquero: @ViewBag.Peluquero</h5>
+        <p class="card-text">Horario seleccionado: @ViewBag.Hora</p>
 
-        <a href="/" class="btn btn-primary mt-4">Volver al inicio</a>
+        <form asp-action="GuardarTurno" method="post">
+            <input type="hidden" name="peluquero" value="@ViewBag.Peluquero" />
+            <input type="hidden" name="hora" value="@ViewBag.Hora" />
+
+            <div class="mb-3">
+                <label for="servicioId" class="form-label">Servicio</label>
+                <select class="form-select" name="servicioId" required>
+                    <option value="">-- Seleccioná un servicio --</option>
+                    @foreach (var servicio in (SelectList)ViewBag.Servicios)
+                    {
+                        <option value="@servicio.Value">@servicio.Text</option>
+                    }
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Confirmar Turno</button>
+        </form>
     </div>
 </div>
 

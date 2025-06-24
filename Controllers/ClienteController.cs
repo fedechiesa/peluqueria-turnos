@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TurnosPeluqueria.Data;
 using TurnosPeluqueria.Models;
@@ -15,21 +16,24 @@ namespace TurnosPeluqueria.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> MisTurnos()
+        public IActionResult MisTurnos()
         {
             var clienteId = HttpContext.Session.GetInt32("ClienteId");
-
             if (clienteId == null)
-                return RedirectToAction("Login", "Auth", new { area = "Auth" });
+            {
+                return RedirectToAction("Login");
+            }
 
-            var turnos = await _context.Turnos
+            var turnos = _context.Turnos
                 .Include(t => t.Peluquero)
                 .Include(t => t.Servicio)
                 .Where(t => t.ClienteId == clienteId)
-                .ToListAsync();
+                .OrderBy(t => t.FechaHora)
+                .ToList();
 
             return View(turnos);
         }
+
 
         public IActionResult Reservar()
         {
@@ -84,11 +88,51 @@ namespace TurnosPeluqueria.Controllers
 
 
         [HttpGet]
+        [HttpGet]
         public IActionResult ConfirmarTurno(string peluquero, string hora)
         {
+            var servicios = _context.Servicios.ToList();
+
             ViewBag.Peluquero = peluquero;
             ViewBag.Hora = hora;
+            ViewBag.Servicios = new SelectList(servicios, "Id", "Nombre");
+
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult GuardarTurno(string peluquero, string hora, int servicioId)
+        {
+            var peluqueroEntity = _context.Peluqueros.FirstOrDefault(p => p.Nombre == peluquero);
+            if (peluqueroEntity == null)
+                return NotFound("Peluquero no encontrado");
+
+            var clienteId = HttpContext.Session.GetInt32("ClienteId");
+            if (clienteId == null)
+                return RedirectToAction("Login");
+
+            var cliente = _context.Clientes.Find(clienteId);
+            if (cliente == null)
+                return NotFound("Cliente no encontrado");
+
+            if (!DateTime.TryParse(hora, out var horaParsed))
+                return BadRequest("Hora inválida");
+
+            DateTime fechaHoraTurno = DateTime.Today.Add(horaParsed.TimeOfDay);
+
+            var nuevoTurno = new Turno
+            {
+                ClienteId = cliente.Id,
+                PeluqueroId = peluqueroEntity.Id,
+                ServicioId = servicioId,
+                FechaHora = fechaHoraTurno,
+                Estado = EstadoTurno.Confirmado
+            };
+
+            _context.Turnos.Add(nuevoTurno);
+            _context.SaveChanges();
+
+            return RedirectToAction("MisTurnos");
         }
 
 

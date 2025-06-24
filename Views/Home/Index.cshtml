@@ -1,8 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
+    var clienteId = Context.Session.GetInt32("ClienteId");
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (clienteId == null)
+{
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido a TurnosPeluquería</h1>
+        <p>Por favor <a asp-controller="Auth" asp-action="Login">iniciá sesión</a> o <a asp-controller="Auth" asp-action="Registro">registrate</a> para comenzar.</p>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h2>Hola, @ViewBag.ClienteNombre 👋</h2>
+        <p>¿Qué te gustaría hacer?</p>
+
+        <div class="mt-4">
+            <a class="btn btn-primary m-2" asp-controller="Cliente" asp-action="MisTurnos">Ver Mis Turnos</a>
+            <a class="btn btn-success m-2" asp-controller="Cliente" asp-action="SeleccionarPeluquero">Sacar Turno</a>
+        </div>
+    </div>
+}

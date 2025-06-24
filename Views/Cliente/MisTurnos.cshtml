@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TurnosPeluqueria.Models.Turno>
+﻿@model List<Turno>
 
 @{
     ViewData["Title"] = "Mis Turnos";
@@ -8,12 +8,12 @@
 
 @if (!Model.Any())
 {
-    <div class="alert alert-info">No tenés turnos reservados.</div>
+    <p>No tenés turnos agendados.</p>
 }
 else
 {
-    <table class="table table-bordered table-striped">
-        <thead class="table-dark">
+    <table class="table table-striped">
+        <thead>
             <tr>
                 <th>Fecha y Hora</th>
                 <th>Peluquero</th>
@@ -22,26 +22,13 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var turno in Model)
             {
                 <tr>
-                    <td>@item.FechaHora.ToString("g")</td>
-                    <td>@item.Peluquero.Nombre</td>
-                    <td>@item.Servicio.Nombre</td>
-                    <td>
-                        @switch (item.Estado)
-                        {
-                            case TurnosPeluqueria.Models.EstadoTurno.Pendiente:
-                                <span class="badge bg-warning text-dark">Pendiente</span>
-                                break;
-                            case TurnosPeluqueria.Models.EstadoTurno.Confirmado:
-                                <span class="badge bg-success">Confirmado</span>
-                                break;
-                            case TurnosPeluqueria.Models.EstadoTurno.Cancelado:
-                                <span class="badge bg-danger">Cancelado</span>
-                                break;
-                        }
-                    </td>
+                    <td>@turno.FechaHora.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@turno.Peluquero.Nombre</td>
+                    <td>@turno.Servicio.Nombre</td>
+                    <td>@turno.Estado</td>
                 </tr>
             }
         </tbody>

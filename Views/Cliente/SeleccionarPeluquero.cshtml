@@ -1,27 +1,29 @@
-﻿@model List<TurnosPeluqueria.Models.Peluquero>
+﻿@model List<Peluquero>
 
+<h2>Seleccioná un peluquero</h2>
 
-<div class="container mt-4">
-    <h2 class="text-center mb-4">Elegí tu peluquero</h2>
-
-    <div class="row justify-content-center">
-        @foreach (var peluquero in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card shadow rounded-4">
-                    <img src="~/img/peluqueros/@peluquero.Imagen" class="card-img-top rounded-top-4" alt="@peluquero.Nombre">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">@peluquero.Nombre</h5>
-                        <p class="text-muted text-center">Turnos disponibles</p>
-                        <div class="d-flex flex-wrap gap-2 justify-content-center">
-                            @foreach (var horario in peluquero.HorariosDisponibles)
-                            {
-                                <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary">@horario</a>
-                            }
-                        </div>
-                    </div>
+<div class="row">
+    @foreach (var peluquero in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="~/images/@peluquero.Imagen" class="card-img-top" alt="Foto de @peluquero.Nombre">
+                <div class="card-body">
+                    <h5 class="card-title">@peluquero.Nombre</h5>
+                    <p class="card-text">
+                        <strong>Horarios disponibles:</strong><br />
+                        @foreach (var horario in peluquero.HorariosDisponibles)
+                        {
+                            <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary m-1">
+                                @horario
+                            </a>
+                        }
+                    </p>
                 </div>
             </div>
-        }
-    </div>
+        </div>
+    }
 </div>
+
+
+
