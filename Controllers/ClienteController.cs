@@ -58,33 +58,29 @@ namespace TurnosPeluqueria.Controllers
         [HttpGet]
         public IActionResult SeleccionarPeluquero()
         {
-            var peluqueros = new List<Peluquero>
-    {
-        new Peluquero
-        {
-            Id = 1,
-            Nombre = "Juan",
-            Imagen = "juan.jpg",
-            HorariosDisponibles = new List<string> { "10:00", "11:30", "14:00" }
-        },
-        new Peluquero
-        {
-            Id = 2,
-            Nombre = "Marta",
-            Imagen = "marta.jpg",
-            HorariosDisponibles = new List<string> { "09:30", "12:00", "15:30" }
-        },
-        new Peluquero
-        {
-            Id = 3,
-            Nombre = "Lucas",
-            Imagen = "lucas.jpg",
-            HorariosDisponibles = new List<string> { "13:00", "16:00", "18:30" }
-        }
-    };
+            // Leemos los peluqueros desde la base
+            var peluqueros = _context.Peluqueros.ToList();
+
+            // Asignamos horarios disponibles SOLO en tiempo de ejecución (no se guardan en base)
+            foreach (var p in peluqueros)
+            {
+                switch (p.Nombre)
+                {
+                    case "Juan":
+                        p.HorariosDisponibles = new List<string> { "10:00", "11:30", "14:00" };
+                        break;
+                    case "Marta":
+                        p.HorariosDisponibles = new List<string> { "09:30", "12:00", "15:30" };
+                        break;
+                    case "Lucas":
+                        p.HorariosDisponibles = new List<string> { "13:00", "16:00", "18:30" };
+                        break;
+                }
+            }
 
             return View(peluqueros);
         }
+
 
 
         [HttpGet]
@@ -100,10 +96,13 @@ namespace TurnosPeluqueria.Controllers
             return View();
         }
 
+        
         [HttpPost]
         public IActionResult GuardarTurno(string peluquero, string hora, int servicioId)
         {
             var peluqueroEntity = _context.Peluqueros.FirstOrDefault(p => p.Nombre == peluquero);
+
+
             if (peluqueroEntity == null)
                 return NotFound("Peluquero no encontrado");
 
@@ -120,6 +119,27 @@ namespace TurnosPeluqueria.Controllers
 
             DateTime fechaHoraTurno = DateTime.Today.Add(horaParsed.TimeOfDay);
 
+            // VALIDACIÓN 1: Ya tiene un turno en ese horario
+            bool clienteYaTieneTurno = _context.Turnos.Any(t =>
+                t.ClienteId == cliente.Id && t.FechaHora == fechaHoraTurno);
+
+            if (clienteYaTieneTurno)
+            {
+                TempData["Error"] = "Ya tenés un turno reservado en ese horario.";
+                return RedirectToAction("MisTurnos");
+            }
+
+            // VALIDACIÓN 2: Ese turno ya lo tiene reservado alguien más con ese peluquero
+            bool turnoOcupado = _context.Turnos.Any(t =>
+                t.PeluqueroId == peluqueroEntity.Id && t.FechaHora == fechaHoraTurno);
+
+            if (turnoOcupado)
+            {
+                TempData["Error"] = "Ese turno ya fue reservado por otra persona.";
+                return RedirectToAction("SeleccionarPeluquero");
+            }
+
+            // Si todo OK, se crea el turno
             var nuevoTurno = new Turno
             {
                 ClienteId = cliente.Id,
@@ -132,8 +152,10 @@ namespace TurnosPeluqueria.Controllers
             _context.Turnos.Add(nuevoTurno);
             _context.SaveChanges();
 
+            TempData["Exito"] = "¡Turno reservado con éxito!";
             return RedirectToAction("MisTurnos");
         }
+
 
 
 

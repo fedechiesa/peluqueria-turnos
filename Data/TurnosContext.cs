@@ -39,6 +39,20 @@ namespace TurnosPeluqueria.Data
                 .WithMany(s => s.Turnos)
                 .HasForeignKey(t => t.ServicioId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Servicio>().HasData(
+        new Servicio { Id = 1, Nombre = "Corte de pelo" },
+        new Servicio { Id = 2, Nombre = "Coloración" },
+        new Servicio { Id = 3, Nombre = "Peinado" },
+        new Servicio { Id = 4, Nombre = "Barba" }
+    );
+
+            modelBuilder.Entity<Peluquero>().HasData(
+    new Peluquero { Id = 1, Nombre = "Juan", Imagen = "juan.jpg" },
+    new Peluquero { Id = 2, Nombre = "Marta", Imagen = "marta.jpg" },
+    new Peluquero { Id = 3, Nombre = "Lucas", Imagen = "lucas.jpg" }
+);
+
         }
     }
 }

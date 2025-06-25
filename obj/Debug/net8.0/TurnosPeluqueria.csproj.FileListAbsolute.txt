@@ -152,12 +152,6 @@ C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets\msbuild.TurnosPeluqueria.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets\msbuild.TurnosPeluqueria.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets\msbuild.build.TurnosPeluqueria.props
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TurnosPeluqueria.props
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TurnosPeluqueria.props
-C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\TurnosPe.B1A793B3.Up2Date
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\TurnosPeluqueria.dll
@@ -287,3 +281,8 @@ C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\bin\Debug\net
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\user\Desktop\coyo\ORT\Nuevas Tecnologias\TurnosPeluqueria\obj\Debug\net8.0\staticwebassets.build.json.cache

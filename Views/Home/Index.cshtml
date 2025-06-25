@@ -3,22 +3,37 @@
     var clienteId = Context.Session.GetInt32("ClienteId");
 }
 
-@if (clienteId == null)
-{
-    <div class="text-center">
-        <h1 class="display-4">Bienvenido a TurnosPeluquería</h1>
-        <p>Por favor <a asp-controller="Auth" asp-action="Login">iniciá sesión</a> o <a asp-controller="Auth" asp-action="Registro">registrate</a> para comenzar.</p>
-    </div>
-}
-else
-{
-    <div class="text-center">
-        <h2>Hola, @ViewBag.ClienteNombre 👋</h2>
-        <p>¿Qué te gustaría hacer?</p>
+<div class="container mt-5">
+    @if (clienteId == null)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow rounded-4 p-4 text-center">
+                    <h1 class="mb-4">Bienvenido a TurnosPeluquería 💇‍♂️💇‍♀️</h1>
+                    <p class="lead">Para comenzar, iniciá sesión o registrate como cliente.</p>
 
-        <div class="mt-4">
-            <a class="btn btn-primary m-2" asp-controller="Cliente" asp-action="MisTurnos">Ver Mis Turnos</a>
-            <a class="btn btn-success m-2" asp-controller="Cliente" asp-action="SeleccionarPeluquero">Sacar Turno</a>
+                    <div class="mt-4">
+                        <a class="btn btn-primary btn-lg me-2" asp-controller="Auth" asp-action="Login">Iniciar Sesión</a>
+                        <a class="btn btn-outline-secondary btn-lg" asp-controller="Cliente" asp-action="Registro">Registrarse</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-}
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow rounded-4 p-4 text-center">
+                    <h2 class="mb-3">Hola, @ViewBag.ClienteNombre 👋</h2>
+                    <p class="lead">¿Qué te gustaría hacer hoy?</p>
+
+                    <div class="mt-4">
+                        <a class="btn btn-success btn-lg me-2" asp-controller="Cliente" asp-action="SeleccionarPeluquero">Sacar un Turno</a>
+                        <a class="btn btn-outline-primary btn-lg" asp-controller="Cliente" asp-action="MisTurnos">Ver Mis Turnos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

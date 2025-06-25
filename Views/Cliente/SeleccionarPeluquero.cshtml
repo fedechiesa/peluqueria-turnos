@@ -1,28 +1,41 @@
 ﻿@model List<Peluquero>
 
-<h2>Seleccioná un peluquero</h2>
+@{
+    ViewData["Title"] = "Seleccionar Peluquero";
+}
 
-<div class="row">
-    @foreach (var peluquero in Model)
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Seleccioná un peluquero</h2>
+
+    @if (TempData["Error"] != null)
     {
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="~/images/@peluquero.Imagen" class="card-img-top" alt="Foto de @peluquero.Nombre">
-                <div class="card-body">
-                    <h5 class="card-title">@peluquero.Nombre</h5>
-                    <p class="card-text">
-                        <strong>Horarios disponibles:</strong><br />
-                        @foreach (var horario in peluquero.HorariosDisponibles)
-                        {
-                            <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary m-1">
-                                @horario
-                            </a>
-                        }
-                    </p>
-                </div>
-            </div>
+        <div class="alert alert-danger text-center">
+            @TempData["Error"]
         </div>
     }
+
+    <div class="row">
+        @foreach (var peluquero in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border border-secondary">
+                    <img src="~/images/@peluquero.Imagen" class="card-img-top rounded-top" alt="Foto de @peluquero.Nombre" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@peluquero.Nombre</h5>
+                        <p class="card-text">
+                            <strong>Horarios disponibles:</strong><br />
+                            @foreach (var horario in peluquero.HorariosDisponibles)
+                            {
+                                <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary m-1">
+                                    @horario
+                                </a>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
 
 

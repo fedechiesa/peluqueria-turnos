@@ -2,30 +2,47 @@
     ViewData["Title"] = "Confirmar Turno";
 }
 
-<h2>Confirmar Turno</h2>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Confirmá tu turno</h2>
 
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Peluquero: @ViewBag.Peluquero</h5>
-        <p class="card-text">Horario seleccionado: @ViewBag.Hora</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
 
-        <form asp-action="GuardarTurno" method="post">
-            <input type="hidden" name="peluquero" value="@ViewBag.Peluquero" />
-            <input type="hidden" name="hora" value="@ViewBag.Hora" />
+                    <form asp-action="GuardarTurno" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Peluquero</label>
+                            <input type="text" name="peluquero" class="form-control" value="@ViewBag.Peluquero" readonly />
+                        </div>
 
-            <div class="mb-3">
-                <label for="servicioId" class="form-label">Servicio</label>
-                <select class="form-select" name="servicioId" required>
-                    <option value="">-- Seleccioná un servicio --</option>
-                    @foreach (var servicio in (SelectList)ViewBag.Servicios)
-                    {
-                        <option value="@servicio.Value">@servicio.Text</option>
-                    }
-                </select>
+                        <div class="mb-3">
+                            <label class="form-label">Horario</label>
+                            <input type="text" name="hora" class="form-control" value="@ViewBag.Hora" readonly />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Servicio</label>
+                            <select name="servicioId" class="form-select" required>
+                                <option value="">-- Seleccioná un servicio --</option>
+                                @foreach (var servicio in ViewBag.Servicios as SelectList)
+                                {
+                                    <option value="@servicio.Value">@servicio.Text</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">Confirmar Turno</button>
+                            <a href="@Url.Action("SeleccionarPeluquero", "Cliente")" class="btn btn-secondary ms-2">Cancelar</a>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-
-            <button type="submit" class="btn btn-success">Confirmar Turno</button>
-        </form>
+        </div>
     </div>
 </div>
+
+
 

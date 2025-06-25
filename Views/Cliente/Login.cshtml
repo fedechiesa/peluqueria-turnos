@@ -8,6 +8,12 @@
             <div class="card shadow rounded-4">
                 <div class="card-body p-4">
                     <h2 class="text-center mb-4">Ingresá a tu cuenta</h2>
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger text-center">
+                            @TempData["Error"]
+                        </div>
+                    }
 
                     <form asp-action="Login" method="post">
                         <div class="mb-3">
