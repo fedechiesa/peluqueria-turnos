@@ -1,31 +1,51 @@
 ﻿@model TurnosPeluqueria.Models.Cliente
+
 @{
     ViewData["Title"] = "Registro";
 }
 
-<h2>Registrarse</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow rounded-4 border-0">
+                <div class="card-body p-4 bg-light">
+                    <h2 class="text-center mb-4">Crear cuenta</h2>
 
-<form asp-action="Registro" method="post">
-    <div class="form-group">
-        <label>Nombre</label>
-        <input asp-for="Nombre" class="form-control" />
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger text-center">@ViewBag.Error</div>
+                    }
+
+                    <form asp-action="Registro" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label"></label>
+                            <input asp-for="Nombre" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Apellido" class="form-label"></label>
+                            <input asp-for="Apellido" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Telefono" class="form-label"></label>
+                            <input asp-for="Telefono" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" type="email" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" type="password" class="form-control" />
+                        </div>
+
+                        <button type="submit" class="btn btn-dark w-100">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label>Apellido</label>
-        <input asp-for="Apellido" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Teléfono</label>
-        <input asp-for="Telefono" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input asp-for="Email" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Contraseña</label>
-        <input asp-for="Password" type="password" class="form-control" />
-    </div>
-    <br />
-    <button type="submit" class="btn btn-primary">Registrarse</button>
-</form>
+</div>

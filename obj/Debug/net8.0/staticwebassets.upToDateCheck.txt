@@ -1,5 +1,6 @@
 wwwroot\css\site.css
-wwwroot\favicon.ico
+wwwroot\img\favicon.png
+wwwroot\img\frexlogo.png
 wwwroot\img\peluqueros\juan.png
 wwwroot\img\peluqueros\lucas.png
 wwwroot\img\peluqueros\marta.png

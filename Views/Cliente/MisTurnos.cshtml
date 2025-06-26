@@ -13,13 +13,13 @@
     </div>
 }
 
-
 @if (TempData["Error"] != null)
 {
     <div class="alert alert-danger">
         @TempData["Error"]
     </div>
 }
+
 @if (!Model.Any())
 {
     <p>No tenés turnos agendados.</p>
@@ -33,6 +33,7 @@ else
                 <th>Peluquero</th>
                 <th>Servicio</th>
                 <th>Estado</th>
+                <th>Cancelar</th>
             </tr>
         </thead>
         <tbody>
@@ -43,8 +44,22 @@ else
                     <td>@turno.Peluquero.Nombre</td>
                     <td>@turno.Servicio.Nombre</td>
                     <td>@turno.Estado</td>
+                    <td>
+                        @if (turno.Estado != EstadoTurno.Cancelado)
+                        {
+                            <form asp-action="CancelarTurno" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@turno.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger">X</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Cancelado</span>
+                        }
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 }
+

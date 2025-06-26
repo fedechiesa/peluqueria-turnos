@@ -27,11 +27,29 @@ namespace TurnosPeluqueria.Controllers
             var turnos = _context.Turnos
                 .Include(t => t.Peluquero)
                 .Include(t => t.Servicio)
-                .Where(t => t.ClienteId == clienteId)
+                .Where(t => t.ClienteId == clienteId && t.Estado != EstadoTurno.Cancelado)
                 .OrderBy(t => t.FechaHora)
                 .ToList();
 
             return View(turnos);
+        }
+
+
+        [HttpPost]
+        public IActionResult CancelarTurno(int id)
+        {
+            var turno = _context.Turnos.Find(id);
+            if (turno == null)
+            {
+                TempData["Error"] = "Turno no encontrado.";
+                return RedirectToAction("MisTurnos");
+            }
+
+            turno.Estado = EstadoTurno.Cancelado;
+            _context.SaveChanges();
+
+            TempData["Exito"] = "El turno fue cancelado correctamente.";
+            return RedirectToAction("MisTurnos");
         }
 
 
@@ -83,7 +101,6 @@ namespace TurnosPeluqueria.Controllers
 
 
 
-        [HttpGet]
         [HttpGet]
         public IActionResult ConfirmarTurno(string peluquero, string hora)
         {

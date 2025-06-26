@@ -35,6 +35,7 @@ namespace TurnosPeluqueria.Controllers
 
                 _context.Clientes.Add(cliente);
                 _context.SaveChanges();
+                TempData["Exito"] = "¡Cuenta creada con éxito! Ahora podés iniciar sesión.";
                 return RedirectToAction("Login");
             }
 
