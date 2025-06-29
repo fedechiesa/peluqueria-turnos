@@ -17,89 +17,89 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TurnosPeluqueria
 build_property.RootNamespace = TurnosPeluqueria
-build_property.ProjectDir = D:\UniversidadCosas\visual\
+build_property.ProjectDir = C:\Users\user\Source\Repos\peluqueria-turnos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\UniversidadCosas\visual
+build_property.MSBuildProjectDirectory = C:\Users\user\Source\Repos\peluqueria-turnos
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/UniversidadCosas/visual/Views/Admin/Create.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Admin/Delete.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Admin/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Admin/Details.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Admin/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Admin/Edit.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Admin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Admin/Index.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Auth/Login.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Auth/Registro.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Auth/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Cliente/ConfirmarTurno.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Cliente/ConfirmarTurno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDb25maXJtYXJUdXJuby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Cliente/Login.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Cliente/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Cliente/MisTurnos.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Cliente/MisTurnos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxNaXNUdXJub3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Cliente/Reservar.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Cliente/Reservar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxSZXNlcnZhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Cliente/SeleccionarPeluquero.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Cliente/SeleccionarPeluquero.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxTZWxlY2Npb25hclBlbHVxdWVyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Home/Index.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Home/Privacy.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Shared/Error.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/_ViewImports.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/_ViewStart.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UniversidadCosas/visual/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Source/Repos/peluqueria-turnos/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mr50t1mcew
