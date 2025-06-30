@@ -138,7 +138,7 @@ namespace TurnosPeluqueria.Controllers
 
             // VALIDACIÓN 1: Ya tiene un turno en ese horario
             bool clienteYaTieneTurno = _context.Turnos.Any(t =>
-                t.ClienteId == cliente.Id && t.FechaHora == fechaHoraTurno);
+                t.ClienteId == cliente.Id && t.FechaHora == fechaHoraTurno && t.Estado != EstadoTurno.Cancelado);
 
             if (clienteYaTieneTurno)
             {
