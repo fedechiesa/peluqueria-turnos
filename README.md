@@ -22,26 +22,37 @@ Está pensada como una solución simple y funcional para la gestión de turnos e
 - C#
 
 ---
+## 🚀 Cómo ejecutar el proyecto
 
-## 💡 Funcionalidades principales
+1. Cloná el repositorio:
+   ```bash
+   git clone https://github.com/fedechiesa/peluqueria-turnos.git
+   ```
 
-- ✅ Login de cliente por nombre y teléfono
-- ✅ Selección de peluquero e imagen
-- ✅ Horarios disponibles por peluquero
-- ✅ Selección de servicio al reservar
-- ✅ Confirmación de turno
-- ✅ Validación para evitar superposición de turnos
-- ✅ Vista de "Mis Turnos" con detalles
-- ✅ Diseño moderno con Bootstrap
+2. Abrí la solución `.sln` en **Visual Studio**.
 
----
+3. Configurá la conexión a la base de datos en `appsettings.json`:
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=localhost;Database=TurnosPeluqueria;Trusted_Connection=True;"
+   }
+   ```
 
-## 🖼️ Capturas de pantalla
+4. Aplicá las migraciones:
+   ```bash
+   Update-Database
+   ```
 
-> 📸 Agregá capturas de tu proyecto en ejecución para mostrarlo completo:
+5. Ejecutá el proyecto (`F5` o `Ctrl + F5`).
 
-```md
-![Inicio no logueado](capturas/inicio.png)
-![Lista de peluqueros](capturas/peluqueros.png)
-![Confirmar turno](capturas/confirmar.png)
-![Mis turnos](capturas/misturnos.png)
+## 📸 Funcionalidades
+
+### Cliente
+- Registro e inicio de sesión
+- Selección de peluquero con su imagen
+- Visualización de horarios disponibles
+- Reserva y cancelación de turnos
+- Listado de "Mis Turnos"
+
+### Administrador
+- Visualización general de todos los turnos agendados
