@@ -148,7 +148,7 @@ namespace TurnosPeluqueria.Controllers
 
             // VALIDACIÓN 2: Ese turno ya lo tiene reservado alguien más con ese peluquero
             bool turnoOcupado = _context.Turnos.Any(t =>
-                t.PeluqueroId == peluqueroEntity.Id && t.FechaHora == fechaHoraTurno);
+                t.PeluqueroId == peluqueroEntity.Id && t.FechaHora == fechaHoraTurno && t.Estado != EstadoTurno.Cancelado);
 
             if (turnoOcupado)
             {
