@@ -1,9 +1,9 @@
 wwwroot\css\site.css
 wwwroot\img\favicon.png
 wwwroot\img\frexlogo.png
-wwwroot\img\peluqueros\marta.jpg
-wwwroot\img\peluqueros\lucas.jpg
 wwwroot\img\peluqueros\juan.jpg
+wwwroot\img\peluqueros\lucas.jpg
+wwwroot\img\peluqueros\marta.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

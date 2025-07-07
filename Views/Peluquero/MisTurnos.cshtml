@@ -1,0 +1,51 @@
+@model List<TurnosPeluqueria.Models.Turno>
+
+@{
+    ViewData["Title"] = "Mis Turnos";
+    var nombre = Context.Session.GetString("PeluqueroNombre");
+}
+
+<div class="container mt-4">
+    <div class="text-center mb-4">
+        <h2>💈 ¡Hola, @nombre!</h2>
+        <p class="lead">Estos son tus turnos agendados:</p>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            💤 No tenés turnos asignados por el momento.
+        </div>
+    }
+    else
+    {
+        <table class="table table-hover shadow-sm border rounded">
+            <thead class="table-dark">
+                <tr>
+                    <th>🧑‍💼 Cliente</th>
+                    <th>💇 Servicio</th>
+                    <th>📅 Fecha</th>
+                    <th>🕒 Hora</th>
+                    <th>📌 Estado</th> <!-- Nueva columna -->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var turno in Model)
+                {
+                    <tr class="@(turno.Estado == EstadoTurno.Cancelado ? "table-danger" : "")">
+                        <td>@turno.Cliente.Nombre</td>
+                        <td>@turno.Servicio.Nombre</td>
+                        <td>@turno.FechaHora.ToString("dd/MM/yyyy")</td>
+                        <td>@turno.FechaHora.ToString("HH:mm")</td>
+                        <td>@turno.Estado</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+
+    <div class="text-center mt-4">
+        <a href="/Auth/Logout" class="btn btn-outline-danger">Cerrar sesión</a>
+    </div>
+</div>

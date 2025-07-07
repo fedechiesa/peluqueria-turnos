@@ -50,19 +50,35 @@ namespace TurnosPeluqueria.Controllers
 
         // POST: /Auth/Login
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Login(string email, string contraseña)
         {
+            // Primero intentamos login como Cliente
             var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Password == contraseña);
             if (cliente != null)
             {
                 HttpContext.Session.SetInt32("ClienteId", cliente.Id);
                 HttpContext.Session.SetString("ClienteNombre", cliente.Nombre);
-                return RedirectToAction("Index", "Home");
+                TempData.Remove("Error"); 
+                return RedirectToAction("MisTurnos", "Cliente");
             }
 
-            ViewBag.Error = "Credenciales inválidas.";
-            return View();
+            // Si no es cliente, intentamos login como Peluquero
+            var peluquero = _context.Peluqueros.FirstOrDefault(p => p.Email == email && p.Password == contraseña);
+            if (peluquero != null)
+            {
+                HttpContext.Session.SetInt32("PeluqueroId", peluquero.Id);
+                HttpContext.Session.SetString("PeluqueroNombre", peluquero.Nombre);
+                TempData.Remove("Error"); 
+                return RedirectToAction("MisTurnos", "Peluquero");
+            }
+
+            // Si ninguno coincide, mostramos error
+            TempData["Error"] = "Email o contraseña incorrectos.";
+            return RedirectToAction("Login");
         }
+
+
 
         // GET: /Auth/Logout
         public IActionResult Logout()

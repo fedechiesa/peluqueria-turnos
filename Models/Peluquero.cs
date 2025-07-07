@@ -7,15 +7,20 @@ namespace TurnosPeluqueria.Models
     public class Peluquero
     {
         public int Id { get; set; }
+
         public string? Nombre { get; set; }
 
         public string? Imagen { get; set; }
 
+        [Required]
+        public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
 
         [NotMapped]
-        // Lista de horarios disponibles para ese peluquero
         public List<string> HorariosDisponibles { get; set; } = new();
-
     }
+
 
 }

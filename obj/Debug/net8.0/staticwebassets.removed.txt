@@ -1,3 +1,0 @@
-C:\Users\user\Source\Repos\peluqueria-turnos\wwwroot\img\peluqueros\juan.png
-C:\Users\user\Source\Repos\peluqueria-turnos\wwwroot\img\peluqueros\lucas.png
-C:\Users\user\Source\Repos\peluqueria-turnos\wwwroot\img\peluqueros\marta.png

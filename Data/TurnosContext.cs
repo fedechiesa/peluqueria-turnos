@@ -48,10 +48,32 @@ namespace TurnosPeluqueria.Data
     );
 
             modelBuilder.Entity<Peluquero>().HasData(
-    new Peluquero { Id = 1, Nombre = "Juan", Imagen = "juan.jpg" },
-    new Peluquero { Id = 2, Nombre = "Marta", Imagen = "marta.jpg" },
-    new Peluquero { Id = 3, Nombre = "Lucas", Imagen = "lucas.jpg" }
+    new Peluquero
+    {
+        Id = 1,
+        Nombre = "Juan",
+        Imagen = "juan.jpg",
+        Email = "juan@mail.com",
+        Password = "123456"
+    },
+    new Peluquero
+    {
+        Id = 2,
+        Nombre = "Marta",
+        Imagen = "marta.jpg",
+        Email = "marta@mail.com",
+        Password = "123456"
+    },
+    new Peluquero
+    {
+        Id = 3,
+        Nombre = "Lucas",
+        Imagen = "lucas.jpg",
+        Email = "lucas@mail.com",
+        Password = "123456"
+    }
 );
+
 
         }
     }
