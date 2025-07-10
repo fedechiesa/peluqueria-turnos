@@ -9,16 +9,20 @@
                 <div class="card-body p-4 bg-light">
                     <h2 class="text-center mb-4">Iniciar Sesión</h2>
 
-                    @if (ViewBag.Error != null)
+                    @if (TempData["Error"] != null)
                     {
-                        <div class="alert alert-danger text-center">@ViewBag.Error</div>
-                    }
-                    @if (TempData["Exito"] != null)
-                    {
-                        <div class="alert alert-success text-center">
-                            @TempData["Exito"]
+                        <div id="errorMensaje" class="alert alert-danger text-center fade show" role="alert">
+                            ⚠️ @TempData["Error"]
                         </div>
                     }
+
+                    @if (TempData["Exito"] != null)
+                    {
+                        <div id="exitoMensaje" class="alert alert-success text-center fade show" role="alert">
+                            ✅ @TempData["Exito"]
+                        </div>
+                    }
+
 
                     <form asp-action="Login" method="post">
                         <div class="mb-3">
@@ -33,6 +37,28 @@
 
                         <button type="submit" class="btn btn-dark w-100">Ingresar</button>
                     </form>
+
+                    @section Scripts {
+                        <script>
+                            // Desaparecer mensajes automáticamente después de 4 segundos
+                            setTimeout(() => {
+                                const error = document.getElementById("errorMensaje");
+                                if (error) {
+                                    error.classList.remove("show");
+                                    error.classList.add("fade");
+                                    setTimeout(() => error.remove(), 300);
+                                }
+
+                                const exito = document.getElementById("exitoMensaje");
+                                if (exito) {
+                                    exito.classList.remove("show");
+                                    exito.classList.add("fade");
+                                    setTimeout(() => exito.remove(), 300);
+                                }
+                            }, 4000);
+                        </script>
+                    }
+
                 </div>
             </div>
         </div>

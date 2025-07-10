@@ -27,6 +27,8 @@ secrets.json
 *.db
 *.mdf
 *.ldf
+*.dll
+*.pdb
 
 # Archivos de Entity Framework
 Migrations/
