@@ -1,0 +1,41 @@
+﻿@model List<TurnosPeluqueria.Models.Turno>
+
+@{
+    ViewData["Title"] = "Panel del Peluquero";
+    Layout = "~/Views/Shared/_LayoutPeluquero.cshtml";
+}
+
+<h2>Todos los turnos reservados</h2>
+
+<form asp-action="PanelPeluquero" method="get">
+    <select name="peluqueroId" class="form-select">
+        <option value="">-- Ver todos --</option>
+        @foreach (var peluquero in ViewBag.Peluqueros)
+        {
+            <option value="@peluquero.Id">@peluquero.Nombre</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-primary mt-2">Filtrar</button>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Servicio</th>
+            <th>Fecha y Hora</th>
+            <th>Peluquero</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var turno in Model)
+        {
+            <tr>
+                <td>@turno.Cliente?.Nombre @turno.Cliente?.Apellido</td>
+                <td>@turno.Servicio?.Nombre</td>
+                <td>@turno.FechaHora.ToString("g")</td>
+                <td>@turno.Peluquero.Nombre</td>       
+            </tr>
+        }
+    </tbody>
+</table>

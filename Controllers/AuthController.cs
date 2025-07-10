@@ -32,6 +32,8 @@ namespace TurnosPeluqueria.Controllers
                     ModelState.AddModelError("Email", "El email ya está registrado.");
                     return View(cliente);
                 }
+               
+                cliente.Rol = "Cliente";
 
                 _context.Clientes.Add(cliente);
                 _context.SaveChanges();
@@ -57,7 +59,15 @@ namespace TurnosPeluqueria.Controllers
             {
                 HttpContext.Session.SetInt32("ClienteId", cliente.Id);
                 HttpContext.Session.SetString("ClienteNombre", cliente.Nombre);
-                return RedirectToAction("Index", "Home");
+                HttpContext.Session.SetString("Rol", cliente.Rol);
+
+                if (cliente.Rol == "Peluquero")
+                    return RedirectToAction("PanelPeluquero", "Home");
+                else
+                    return RedirectToAction("Index", "Home"); // cliente común
+
+
+                
             }
 
             ViewBag.Error = "Credenciales inválidas.";

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TurnosPeluqueria.Data;
 using Microsoft.Extensions.Logging;
 using TurnosPeluqueria.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TurnosPeluqueria.Controllers
 {
@@ -42,7 +43,36 @@ namespace TurnosPeluqueria.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    
 
+       public async Task<IActionResult> PanelPeluquero(int? peluqueroId)
+{
+    var peluqueros = await _context.Peluqueros.ToListAsync();
+    ViewBag.Peluqueros = peluqueros;
+
+    List<Turno> turnos;
+
+            if (peluqueroId.HasValue)
+            {
+                turnos = await _context.Turnos
+                    .Include(t => t.Cliente)
+                    .Include(t => t.Servicio)
+                    .Include(t => t.Peluquero)
+                    .Where(t => t.PeluqueroId == peluqueroId && t.Estado == EstadoTurno.Confirmado)
+                    .ToListAsync();
+            }
+            else
+            {
+                turnos = await _context.Turnos
+                    .Include(t => t.Cliente)
+                    .Include(t => t.Servicio)
+                    .Include(t => t.Peluquero)
+                    .Where(t => t.Estado == EstadoTurno.Confirmado)
+                    .ToListAsync();
+            }
+
+
+            return View(turnos);
 }
+
+    }
 }

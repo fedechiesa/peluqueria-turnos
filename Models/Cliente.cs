@@ -26,6 +26,10 @@ namespace TurnosPeluqueria.Models
         [DataType(DataType.Password)]
         public string? Password { get; set; }
 
+        [Required]
+        public string Rol { get; set; } = "Cliente";
+
+
         public List<Turno> Turnos { get; set; } = new();
 
         public List<Turno> ObtenerTurnosFuturos() =>
