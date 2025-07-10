@@ -61,20 +61,13 @@ namespace TurnosPeluqueria.Controllers
             {
                 HttpContext.Session.SetInt32("ClienteId", cliente.Id);
                 HttpContext.Session.SetString("ClienteNombre", cliente.Nombre);
-<<<<<<< HEAD
                 HttpContext.Session.SetString("Rol", cliente.Rol);
+                TempData.Remove("Error");
 
                 if (cliente.Rol == "Peluquero")
                     return RedirectToAction("PanelPeluquero", "Home");
                 else
-                    return RedirectToAction("Index", "Home"); // cliente común
-
-
-                
-=======
-                TempData.Remove("Error"); 
-                return RedirectToAction("MisTurnos", "Cliente");
->>>>>>> 13545a9be8acb3a34764a9e5ff533e18c61ba94c
+                    return RedirectToAction("MisTurnos", "Cliente");
             }
 
             // Si no es cliente, intentamos login como Peluquero
@@ -83,7 +76,7 @@ namespace TurnosPeluqueria.Controllers
             {
                 HttpContext.Session.SetInt32("PeluqueroId", peluquero.Id);
                 HttpContext.Session.SetString("PeluqueroNombre", peluquero.Nombre);
-                TempData.Remove("Error"); 
+                TempData.Remove("Error");
                 return RedirectToAction("MisTurnos", "Peluquero");
             }
 
