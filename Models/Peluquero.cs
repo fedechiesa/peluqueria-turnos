@@ -18,8 +18,10 @@ namespace TurnosPeluqueria.Models
         [Required]
         public string Password { get; set; }
 
+        
         [NotMapped]
-        public List<string> HorariosDisponibles { get; set; } = new();
+        public List<Turno> HorariosDisponibles { get; set; } = new();
+
     }
 
 

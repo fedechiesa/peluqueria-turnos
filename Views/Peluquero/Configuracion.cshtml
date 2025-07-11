@@ -1,0 +1,120 @@
+﻿@model TurnosPeluqueria.Models.HorarioPersonalizadoViewModel
+@{
+    ViewData["Title"] = "Configuración";
+}
+
+<style>
+    body {
+        background-color: #1e1e2f;
+        color: #f1f1f1;
+    }
+
+    .card-dark {
+        background-color: #2c2c3e;
+        border: none;
+        border-radius: 10px;
+        padding: 25px;
+        color: #fff;
+    }
+
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    input[type="time"] {
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .form-check-label {
+        margin-left: 5px;
+    }
+
+    h2, h5 {
+        color: #f8f9fa;
+    }
+
+    .btn-custom {
+        margin: 5px;
+        width: 220px;
+    }
+</style>
+
+<div class="container text-center mt-5">
+    <h2>⚙️ Configuración de Horarios</h2>
+    <p class="mb-4">Desde aquí podés cargar o reiniciar tus horarios de trabajo.</p>
+
+    @if (TempData["Exito"] != null)
+    {
+        <div class="alert alert-success">@TempData["Exito"]</div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <!-- Horarios actuales -->
+    <div class="card-dark mt-4 mx-auto" style="max-width: 500px;">
+        <h5>📅 Horarios actuales establecidos</h5>
+
+        @if (ViewBag.HorariosActuales != null && ViewBag.HorariosActuales.Count > 0)
+        {
+            <ul class="list-unstyled mt-3">
+                @foreach (var h in ViewBag.HorariosActuales)
+                {
+                    <li>
+                        <strong>@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetDayName((DayOfWeek)h.Dia)</strong>:
+                        @h.Desde.Hours:00 - @h.Hasta.Hours:00
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted">No hay horarios establecidos actualmente.</p>
+        }
+    </div>
+
+    <!-- Botón reiniciar -->
+    <form asp-action="ReiniciarHorarios" method="post" class="mt-3">
+        <button type="submit" class="btn btn-outline-danger">
+            <i class="bi bi-trash-fill"></i> Reiniciar horarios
+        </button>
+    </form>
+
+    <!-- Formulario de horarios personalizados -->
+    <div class="card-dark mt-4 mx-auto" style="max-width: 700px;">
+        <h5>📅 Configurá tus días y horarios de trabajo</h5>
+
+        <form asp-action="GuardarHorariosPersonalizados" method="post">
+            @for (int i = 0; i < Model.Dias.Count; i++)
+            {
+                <div class="form-group row align-items-center mt-3">
+                    <div class="col-md-2 text-start">
+                        <input type="checkbox" name="Dias[@i].Trabaja" value="true"
+                        @(Model.Dias[i].Trabaja ? "checked" : "") />
+                        <label class="form-check-label">
+                            @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(Model.Dias[i].Dia)
+                        </label>
+                        <input type="hidden" name="Dias[@i].Dia" value="@Model.Dias[i].Dia" />
+                    </div>
+                    <div class="col-md-5">
+                        Desde: <input type="time" name="Dias[@i].Desde" value="@Model.Dias[i].Desde.ToString(@"hh\:mm")" />
+                    </div>
+                    <div class="col-md-5">
+                        Hasta: <input type="time" name="Dias[@i].Hasta" value="@Model.Dias[i].Hasta.ToString(@"hh\:mm")" />
+                    </div>
+                </div>
+            }
+
+            <button type="submit" class="btn btn-success mt-4">
+                💾 Guardar horarios personalizados
+            </button>
+        </form>
+    </div>
+</div>

@@ -14,7 +14,8 @@ namespace TurnosPeluqueria.Data
         public DbSet<Peluquero> Peluqueros { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
         public DbSet<Turno> Turnos { get; set; }
-     
+        public DbSet<HorarioPeluquero> HorariosPeluqueros { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

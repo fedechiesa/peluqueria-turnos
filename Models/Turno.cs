@@ -12,9 +12,9 @@ namespace TurnosPeluqueria.Models
         [Display(Name = "Fecha y Hora")]
         public DateTime FechaHora { get; set; }
 
-        [Required]
+       
         [Display(Name = "Cliente")]
-        public int ClienteId { get; set; }
+        public int? ClienteId { get; set; }
         public Cliente Cliente { get; set; }
 
         [Required]

@@ -54,10 +54,18 @@ namespace TurnosPeluqueria.Controllers
         }
 
 
-        public IActionResult Reservar()
+        public IActionResult Reservar(int id)
         {
-            // Podés cargar peluqueros, servicios, fechas disponibles, etc.
-            return View();
+            var turnosDisponibles = _context.Turnos
+        .Include(t => t.Servicio)
+        .Where(t => t.PeluqueroId == id && t.Estado == EstadoTurno.Pendiente && t.ClienteId == null)
+        .OrderBy(t => t.FechaHora)
+        .ToList();
+
+            var peluquero = _context.Peluqueros.FirstOrDefault(p => p.Id == id);
+            ViewBag.PeluqueroNombre = peluquero?.Nombre ?? "Peluquero";
+
+            return View(turnosDisponibles);
         }
 
         [HttpGet]
@@ -75,46 +83,72 @@ namespace TurnosPeluqueria.Controllers
         }
 
         [HttpGet]
-        public IActionResult SeleccionarPeluquero()
+        public IActionResult SeleccionarPeluquero(DateTime? fecha)
         {
-            // Leemos los peluqueros desde la base
+            var diaSeleccionado = fecha?.Date ?? DateTime.Today;
+
             var peluqueros = _context.Peluqueros.ToList();
 
-            // Asignamos horarios disponibles SOLO en tiempo de ejecución (no se guardan en base)
             foreach (var p in peluqueros)
             {
-                switch (p.Nombre)
-                {
-                    case "Juan":
-                        p.HorariosDisponibles = new List<string> { "10:00", "11:30", "14:00" };
-                        break;
-                    case "Marta":
-                        p.HorariosDisponibles = new List<string> { "09:30", "12:00", "15:30" };
-                        break;
-                    case "Lucas":
-                        p.HorariosDisponibles = new List<string> { "13:00", "16:00", "18:30" };
-                        break;
-                }
-            }
+                var horarios = _context.Turnos
+    .Where(t => t.PeluqueroId == p.Id &&
+                t.Estado == EstadoTurno.Pendiente &&
+                t.ClienteId == null &&
+                t.FechaHora.Date == diaSeleccionado &&
+                t.FechaHora > DateTime.Now)
+    .OrderBy(t => t.FechaHora)
+    .ToList();
 
+                p.HorariosDisponibles = horarios;
+            }
+            ViewBag.FechaSeleccionada = diaSeleccionado.ToString("yyyy-MM-dd");
             return View(peluqueros);
         }
 
 
 
+
+
         [HttpGet]
-        public IActionResult ConfirmarTurno(string peluquero, string hora)
+        public IActionResult ConfirmarTurno(int turnoId)
         {
-            var servicios = _context.Servicios.ToList();
+            var turno = _context.Turnos
+                .Include(t => t.Peluquero)
+                .FirstOrDefault(t => t.Id == turnoId);
 
-            ViewBag.Peluquero = peluquero;
-            ViewBag.Hora = hora;
-            ViewBag.Servicios = new SelectList(servicios, "Id", "Nombre");
+            if (turno == null)
+            {
+                return NotFound();
+            }
 
-            return View();
+            
+            ViewBag.Servicios = _context.Servicios.ToList();
+
+            return View(turno);
         }
 
-        
+        [HttpPost]
+        public IActionResult ConfirmarTurno(int turnoId, int servicioId, string comentario)
+        {
+            var turno = _context.Turnos.FirstOrDefault(t => t.Id == turnoId);
+            if (turno == null)
+                return NotFound();
+
+            var clienteId = HttpContext.Session.GetInt32("ClienteId");
+            if (clienteId == null)
+                return RedirectToAction("Login");
+
+            turno.ClienteId = clienteId;
+            turno.ServicioId = servicioId;
+            turno.Estado = EstadoTurno.Confirmado;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("MisTurnos");
+        }
+
+
         [HttpPost]
         public IActionResult GuardarTurno(string peluquero, string hora, int servicioId)
         {

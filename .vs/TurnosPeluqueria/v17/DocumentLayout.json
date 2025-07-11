@@ -3,78 +3,91 @@
   "WorkspaceRootPath": "D:\\UniversidadCosas\\visual\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\shared\\_layoutpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\shared\\_layoutpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\peluquero\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\peluquero\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\peluquerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\peluquerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UniversidadCosas\\visual\\Migrations\\20250710161956_AgregarCamposLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250710161956_AgregarCamposLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\models\\horariopersonalizadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:models\\horariopersonalizadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TurnosPeluqueriaDb/True/SqlTable/dbo.Clientes.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\models\\horariopeluquero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:models\\horariopeluquero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\turnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\turnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\peluquero\\configuracion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\peluquero\\configuracion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\data\\turnoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:data\\turnoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\peluquero\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\peluquero\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\auth\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\auth\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\migrations\\turnoscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:migrations\\turnoscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\seleccionarpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\seleccionarpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\confirmarturno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\confirmarturno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\models\\peluquero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:models\\peluquero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UniversidadCosas\\visual\\Migrations\\20250710215343_ClienteIdNullableFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250710215343_ClienteIdNullableFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\shared\\_layoutpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\shared\\_layoutpeluquero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\auth\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\auth\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\confirmarturno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\confirmarturno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TurnosPeluqueriaDb/True/SqlTable/dbo.Turnos.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\misturnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\cliente\\reservar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:views\\cliente\\reservar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -85,6 +98,18 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\Migrations\\20250625193046_CargarServicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\migrations\\20250710221522_clienteidnullablefixv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:migrations\\20250710221522_clienteidnullablefixv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\migrations\\20250710215750_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:migrations\\20250710215750_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|d:\\universidadcosas\\visual\\migrations\\20250710220442_clienteidahoranullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9E0FE6-6A04-41CB-9B2A-8CAFD7ECBB2C}|TurnosPeluqueria.csproj|solutionrelative:migrations\\20250710220442_clienteidahoranullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +119,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,106 +131,265 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LayoutPeluquero.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_LayoutPeluquero.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPeluquero.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_LayoutPeluquero.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutPeluquero.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-10T16:22:22.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwDIAAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-10T16:21:34.169Z",
+              "DocumentIndex": 3,
+              "Title": "HorarioPersonalizadoViewModel.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Models\\HorarioPersonalizadoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\HorarioPersonalizadoViewModel.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Models\\HorarioPersonalizadoViewModel.cs",
+              "RelativeToolTip": "Models\\HorarioPersonalizadoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T01:45:57.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PeluqueroController.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\PeluqueroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PeluqueroController.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\PeluqueroController.cs",
+              "RelativeToolTip": "Controllers\\PeluqueroController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:47:08.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MisTurnos.cshtml",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Peluquero\\MisTurnos.cshtml",
               "RelativeDocumentMoniker": "Views\\Peluquero\\MisTurnos.cshtml",
               "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Peluquero\\MisTurnos.cshtml",
               "RelativeToolTip": "Views\\Peluquero\\MisTurnos.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-10T16:21:32.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250710161956_AgregarCamposLogin.cs",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\20250710161956_AgregarCamposLogin.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250710161956_AgregarCamposLogin.cs",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\20250710161956_AgregarCamposLogin.cs",
-              "RelativeToolTip": "Migrations\\20250710161956_AgregarCamposLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T16:19:56.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T16:21:32.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "dbo.Clientes [Datos]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TurnosPeluqueriaDb/True/SqlTable/dbo.Clientes.sql",
-              "ToolTip": "dbo.Clientes [Datos]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-10T16:17:36.815Z",
+              "Title": "HorarioPeluquero.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Models\\HorarioPeluquero.cs",
+              "RelativeDocumentMoniker": "Models\\HorarioPeluquero.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Models\\HorarioPeluquero.cs",
+              "RelativeToolTip": "Models\\HorarioPeluquero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:50:11.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Turno.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Models\\Turno.cs",
+              "RelativeDocumentMoniker": "Models\\Turno.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Models\\Turno.cs",
+              "RelativeToolTip": "Models\\Turno.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:52:44.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T22:27:32.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TurnosContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\TurnosContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\TurnosContextModelSnapshot.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\TurnosContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\TurnosContextModelSnapshot.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T23:14:45.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Configuracion.cshtml",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Peluquero\\Configuracion.cshtml",
+              "RelativeDocumentMoniker": "Views\\Peluquero\\Configuracion.cshtml",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Peluquero\\Configuracion.cshtml",
+              "RelativeToolTip": "Views\\Peluquero\\Configuracion.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-11T01:27:53.193Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "TurnosController.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\TurnosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TurnosController.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\TurnosController.cs",
+              "RelativeToolTip": "Controllers\\TurnosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T20:16:38.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SeleccionarPeluquero.cshtml",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\SeleccionarPeluquero.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\SeleccionarPeluquero.cshtml",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\SeleccionarPeluquero.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\SeleccionarPeluquero.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-24T15:22:17.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Peluquero.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Models\\Peluquero.cs",
+              "RelativeDocumentMoniker": "Models\\Peluquero.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Models\\Peluquero.cs",
+              "RelativeToolTip": "Models\\Peluquero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:33:45.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TurnoService.cs",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Services\\TurnoService.cs",
               "RelativeDocumentMoniker": "Services\\TurnoService.cs",
               "ToolTip": "D:\\UniversidadCosas\\visual\\Services\\TurnoService.cs",
               "RelativeToolTip": "Services\\TurnoService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:59:32.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T21:52:10.454Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-23T16:43:11.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TurnosContext.cs",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Data\\TurnosContext.cs",
-              "RelativeDocumentMoniker": "Data\\TurnosContext.cs",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Data\\TurnosContext.cs",
-              "RelativeToolTip": "Data\\TurnosContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T16:58:23.497Z"
+              "WhenOpened": "2025-07-11T00:06:49.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
+              "Title": "ConfirmarTurno.cshtml",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\ConfirmarTurno.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cliente\\ConfirmarTurno.cshtml",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\ConfirmarTurno.cshtml",
+              "RelativeToolTip": "Views\\Cliente\\ConfirmarTurno.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-24T15:25:40.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwC0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:50:57.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250710221522_ClienteIdNullableFixV2.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\20250710221522_ClienteIdNullableFixV2.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250710221522_ClienteIdNullableFixV2.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\20250710221522_ClienteIdNullableFixV2.cs",
+              "RelativeToolTip": "Migrations\\20250710221522_ClienteIdNullableFixV2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T22:15:22.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250710215750_InitialCreate.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\20250710215750_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250710215750_InitialCreate.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\20250710215750_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250710215750_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:57:50.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20250710220442_ClienteIdAhoraNullable.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\20250710220442_ClienteIdAhoraNullable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250710220442_ClienteIdAhoraNullable.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\20250710220442_ClienteIdAhoraNullable.cs",
+              "RelativeToolTip": "Migrations\\20250710220442_ClienteIdAhoraNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T22:04:42.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250710215343_ClienteIdNullableFix.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Migrations\\20250710215343_ClienteIdNullableFix.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250710215343_ClienteIdNullableFix.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Migrations\\20250710215343_ClienteIdNullableFix.cs",
+              "RelativeToolTip": "Migrations\\20250710215343_ClienteIdNullableFix.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:53:43.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HorarioController.cs",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\HorarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HorarioController.cs",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\HorarioController.cs",
+              "RelativeToolTip": "Controllers\\HorarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T21:11:43.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_LayoutPeluquero.cshtml",
+              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_LayoutPeluquero.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPeluquero.cshtml",
+              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Shared\\_LayoutPeluquero.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutPeluquero.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T16:22:22.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Registro.cshtml",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Auth\\Registro.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Registro.cshtml",
@@ -217,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Cliente\\Login.cshtml",
@@ -229,55 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T20:37:35.905Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T02:36:39.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SeleccionarPeluquero.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\SeleccionarPeluquero.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cliente\\SeleccionarPeluquero.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\SeleccionarPeluquero.cshtml",
-              "RelativeToolTip": "Views\\Cliente\\SeleccionarPeluquero.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-24T15:22:17.322Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MisTurnos.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\MisTurnos.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cliente\\MisTurnos.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\MisTurnos.cshtml",
-              "RelativeToolTip": "Views\\Cliente\\MisTurnos.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-23T16:47:30.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -289,31 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T02:22:00.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ConfirmarTurno.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\ConfirmarTurno.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cliente\\ConfirmarTurno.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\ConfirmarTurno.cshtml",
-              "RelativeToolTip": "Views\\Cliente\\ConfirmarTurno.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-24T15:25:40.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "dbo.Turnos.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TurnosPeluqueriaDb/True/SqlTable/dbo.Turnos.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TurnosPeluqueriaDb/True/SqlTable/dbo.Turnos.sql",
@@ -322,19 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Reservar.cshtml",
-              "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\Reservar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cliente\\Reservar.cshtml",
-              "ToolTip": "D:\\UniversidadCosas\\visual\\Views\\Cliente\\Reservar.cshtml",
-              "RelativeToolTip": "Views\\Cliente\\Reservar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-23T16:50:45.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\UniversidadCosas\\visual\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
@@ -346,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "20250625194140_CargarPeluqueros.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\Migrations\\20250625194140_CargarPeluqueros.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\Migrations\\20250625194140_CargarPeluqueros.cs",
@@ -355,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "20250625193046_CargarServicios.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\Migrations\\20250625193046_CargarServicios.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\coyo\\ORT\\Nuevas Tecnologias\\TurnosPeluqueria\\Migrations\\20250625193046_CargarServicios.cs",

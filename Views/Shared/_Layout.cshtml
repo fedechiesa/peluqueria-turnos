@@ -14,11 +14,20 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
-
-                    <img src="~/img/frexlogo.png" alt="FrexBarber" width="40" height="40" class="me-2" />
-                    <strong>FrexBarber</strong>
-                </a>
+                @if (Context.Session.GetInt32("PeluqueroId") != null)
+                {
+                    <div class="navbar-brand d-flex align-items-center">
+                        <img src="~/img/frexlogo.png" alt="FrexBarber" width="40" height="40" class="me-2" />
+                        <strong>FrexBarber</strong>
+                    </div>
+                }
+                else
+                {
+                    <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/frexlogo.png" alt="FrexBarber" width="40" height="40" class="me-2" />
+                        <strong>FrexBarber</strong>
+                    </a>
+                }
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -48,10 +57,13 @@
                                 <span class="nav-link text-dark">Hola, @Context.Session.GetString("PeluqueroNombre") ✂️</span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Turnos" asp-action="MisTurnos">📋 Mis Turnos</a>
+                                <a class="nav-link" asp-controller="Peluquero" asp-action="MisTurnos">📋 Mis Turnos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" asp-controller="Auth" asp-action="Logout">Salir</a>
+                                <a class="nav-link" asp-controller="Peluquero" asp-action="Configuracion">⚙️ Configuración</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" asp-controller="Auth" asp-action="Logout">🚪 Cerrar sesión</a>
                             </li>
                         }
                         else

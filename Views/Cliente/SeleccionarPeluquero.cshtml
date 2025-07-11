@@ -14,6 +14,35 @@
         </div>
     }
 
+    @if (!Model.Any(p => p.HorariosDisponibles != null && p.HorariosDisponibles.Any()))
+    {
+        <div class="alert alert-warning text-center my-4">
+            <strong>⚠️ No hay turnos disponibles</strong> para la fecha seleccionada.
+        </div>
+    }
+
+
+    <div class="container mb-4">
+        <div class="card shadow-sm p-3">
+            <form method="get" asp-action="SeleccionarPeluquero" class="row g-2 align-items-center justify-content-center">
+                <div class="col-auto">
+                    <label for="fecha" class="col-form-label fw-bold">Seleccioná una fecha:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="date" name="fecha" id="fecha" class="form-control"
+                           value="@ViewBag.FechaSeleccionada" min="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i> Buscar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
     <div class="row">
         @foreach (var peluquero in Model)
         {
@@ -22,15 +51,26 @@
                     <img src="~/img/peluqueros/@peluquero.Imagen" class="card-img-top rounded-top" alt="Foto de @peluquero.Nombre" style="height: 250px; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5 class="card-title">@peluquero.Nombre</h5>
-                        <p class="card-text">
-                            <strong>Horarios disponibles:</strong><br />
-                            @foreach (var horario in peluquero.HorariosDisponibles)
-                            {
-                                <a href="@Url.Action("ConfirmarTurno", "Cliente", new { peluquero = peluquero.Nombre, hora = horario })" class="btn btn-outline-primary m-1">
-                                    @horario
-                                </a>
-                            }
-                        </p>
+                        @if (peluquero.HorariosDisponibles != null && peluquero.HorariosDisponibles.Any())
+                        {
+                            <p class="card-text">
+                                <strong>Horarios disponibles:</strong><br />
+                                @foreach (var horario in peluquero.HorariosDisponibles)
+                                {
+                                    <a href="@Url.Action("ConfirmarTurno", "Cliente", new { turnoId = horario.Id })"
+                                       class="btn btn-outline-primary m-1">
+                                        @horario.FechaHora.ToString("HH:mm")
+                                    </a>
+
+
+                                }
+                            </p>
+                        }
+                        else
+                        {
+                            <p class="text-muted">No hay turnos disponibles por el momento.</p>
+                        }
+
                     </div>
                 </div>
             </div>

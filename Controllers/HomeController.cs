@@ -30,6 +30,7 @@ namespace TurnosPeluqueria.Controllers
 
             ViewBag.ClienteNombre = cliente?.Nombre ?? "Cliente";
 
+
             return View();
         }
 

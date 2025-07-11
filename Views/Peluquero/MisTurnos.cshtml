@@ -11,6 +11,17 @@
         <p class="lead">Estos son tus turnos agendados:</p>
     </div>
 
+    @if (TempData["Exito"] != null)
+    {
+        <div class="alert alert-success text-center">
+            @TempData["Exito"]
+        </div>
+    }
+
+    <div class="text-center mb-4">
+        <a asp-action="GenerarTurnos" class="btn btn-primary">Generar Turnos</a>
+    </div>
+
     @if (!Model.Any())
     {
         <div class="alert alert-info text-center">
@@ -32,8 +43,19 @@
             <tbody>
                 @foreach (var turno in Model)
                 {
+                
                     <tr class="@(turno.Estado == EstadoTurno.Cancelado ? "table-danger" : "")">
-                        <td>@turno.Cliente.Nombre</td>
+                        <td>
+                            @if (turno.Cliente != null)
+                            {
+                                @($"{turno.Cliente.Nombre} {turno.Cliente.Apellido}")
+                            }
+                            else
+                            {
+                                <span class="text-muted">Sin asignar</span>
+                            }
+                        </td>
+                    
                         <td>@turno.Servicio.Nombre</td>
                         <td>@turno.FechaHora.ToString("dd/MM/yyyy")</td>
                         <td>@turno.FechaHora.ToString("HH:mm")</td>

@@ -1,48 +1,46 @@
-﻿@{
+﻿@model TurnosPeluqueria.Models.Turno
+@{
     ViewData["Title"] = "Confirmar Turno";
+    var servicios = ViewBag.Servicios as List<TurnosPeluqueria.Models.Servicio>;
 }
 
-<div class="container mt-4">
-    <h2 class="text-center mb-4">Confirmá tu turno</h2>
-
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow">
+<div class="container mt-5">
+    <div class="card shadow-lg mx-auto" style="max-width: 600px;">
+        <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center p-3">
+                <img src="~/img/peluqueros/@Model.Peluquero.Imagen" class="img-fluid rounded-circle" alt="Foto Peluquero" style="width: 120px; height: 120px; object-fit: cover;">
+            </div>
+            <div class="col-md-8">
                 <div class="card-body">
+                    <h4 class="card-title mb-2">Confirmar Turno</h4>
+                    <p><strong>Peluquero:</strong> @Model.Peluquero.Nombre</p>
+                    <p><strong>Horario:</strong> @Model.FechaHora.ToString("dddd dd MMMM yyyy, HH:mm")</p>
 
-                    <form asp-action="GuardarTurno" method="post">
-                        <div class="mb-3">
-                            <label class="form-label">Peluquero</label>
-                            <input type="text" name="peluquero" class="form-control" value="@ViewBag.Peluquero" readonly />
-                        </div>
+                    <form method="post" asp-action="ConfirmarTurno">
+                        <input type="hidden" name="turnoId" value="@Model.Id" />
 
-                        <div class="mb-3">
-                            <label class="form-label">Horario</label>
-                            <input type="text" name="hora" class="form-control" value="@ViewBag.Hora" readonly />
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Servicio</label>
+                        <div class="form-group mb-3">
+                            <label for="servicioId">Servicio:</label>
                             <select name="servicioId" class="form-select" required>
-                                <option value="">-- Seleccioná un servicio --</option>
-                                @foreach (var servicio in ViewBag.Servicios as SelectList)
+                                <option disabled selected>Seleccioná un servicio</option>
+                                @foreach (var servicio in servicios)
                                 {
-                                    <option value="@servicio.Value">@servicio.Text</option>
+                                    <option value="@servicio.Id">@servicio.Nombre</option>
                                 }
                             </select>
                         </div>
 
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-success">Confirmar Turno</button>
-                            <a href="@Url.Action("SeleccionarPeluquero", "Cliente")" class="btn btn-secondary ms-2">Cancelar</a>
+                        <div class="form-group mb-3">
+                            <label for="comentario">Comentario (opcional):</label>
+                            <textarea name="comentario" class="form-control" rows="2"></textarea>
                         </div>
-                    </form>
 
+                        <button type="submit" class="btn btn-success w-100">✅ Confirmar Turno</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
