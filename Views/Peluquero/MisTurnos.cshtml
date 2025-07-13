@@ -37,14 +37,17 @@
                     <th>💇 Servicio</th>
                     <th>📅 Fecha</th>
                     <th>🕒 Hora</th>
-                    <th>📌 Estado</th> <!-- Nueva columna -->
+                    <th>📌 Estado</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var turno in Model)
                 {
-                
-                    <tr class="@(turno.Estado == EstadoTurno.Cancelado ? "table-danger" : "")">
+                    var rowClass = turno.Estado == EstadoTurno.Cancelado
+                    ? "table-danger"
+                    : (turno.FechaHora < DateTime.Now ? "table-secondary" : "");
+
+                    <tr class="@rowClass">
                         <td>
                             @if (turno.Cliente != null)
                             {
@@ -55,7 +58,6 @@
                                 <span class="text-muted">Sin asignar</span>
                             }
                         </td>
-                    
                         <td>@turno.Servicio.Nombre</td>
                         <td>@turno.FechaHora.ToString("dd/MM/yyyy")</td>
                         <td>@turno.FechaHora.ToString("HH:mm")</td>
@@ -63,7 +65,6 @@
                     </tr>
                 }
             </tbody>
-
         </table>
     }
 
@@ -71,3 +72,4 @@
         <a href="/Auth/Logout" class="btn btn-outline-danger">Cerrar sesión</a>
     </div>
 </div>
+

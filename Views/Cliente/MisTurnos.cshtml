@@ -45,16 +45,20 @@ else
                     <td>@turno.Servicio.Nombre</td>
                     <td>@turno.Estado</td>
                     <td>
-                        @if (turno.Estado != EstadoTurno.Cancelado)
+                        @if (turno.Estado != EstadoTurno.Cancelado && turno.FechaHora > DateTime.Now)
                         {
                             <form asp-action="CancelarTurno" method="post" style="display:inline;">
                                 <input type="hidden" name="id" value="@turno.Id" />
                                 <button type="submit" class="btn btn-sm btn-danger">X</button>
                             </form>
                         }
-                        else
+                        else if (turno.Estado == EstadoTurno.Cancelado)
                         {
                             <span class="text-muted">Cancelado</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Expirado</span>
                         }
                     </td>
                 </tr>
@@ -62,4 +66,5 @@ else
         </tbody>
     </table>
 }
+
 

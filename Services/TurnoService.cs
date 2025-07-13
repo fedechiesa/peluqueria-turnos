@@ -53,29 +53,17 @@ namespace TurnosPeluqueria.Services
             return true;
         }
 
-        // Obtener turnos por cliente
-        public List<Turno> ObtenerTurnosPorCliente(int clienteId)
-        {
-            return _context.Turnos
-                .Where(t => t.ClienteId == clienteId)
-                .OrderBy(t => t.FechaHora)
-                .ToList();
-        }
 
+        // Obtener turnos por cliente
         public void GenerarTurnosAutomaticos(int peluqueroId)
         {
-            // No generar si ya hay turnos futuros
-            if (_context.Turnos.Any(t =>
-                t.PeluqueroId == peluqueroId &&
-                t.FechaHora >= DateTime.Today))
-            {
-                return;
-            }
-
             // Obtener horarios cargados del peluquero
             var horarios = _context.HorariosPeluqueros
                 .Where(h => h.PeluqueroId == peluqueroId)
                 .ToList();
+
+            if (!horarios.Any())
+                return; // No hay horarios cargados, salimos
 
             var fechaHoy = DateTime.Today;
 
@@ -98,17 +86,20 @@ namespace TurnosPeluqueria.Services
 
                         bool yaExiste = _context.Turnos.Any(t =>
                             t.PeluqueroId == peluqueroId &&
-                            t.FechaHora == fechaHora);
+                            t.FechaHora == fechaHora &&
+                            t.Estado != EstadoTurno.Cancelado); // solo bloquea si NO está cancelado
 
                         if (!yaExiste)
                         {
-                            _context.Turnos.Add(new Turno
+                            var turno = new Turno
                             {
                                 FechaHora = fechaHora,
                                 PeluqueroId = peluqueroId,
-                                ServicioId = 1, // Podés cambiar esto según lógica
+                                ServicioId = 1, // 👈 Asegurate de que este ID exista
                                 Estado = EstadoTurno.Pendiente
-                            });
+                            };
+
+                            _context.Turnos.Add(turno);
                         }
                     }
                 }
@@ -116,6 +107,8 @@ namespace TurnosPeluqueria.Services
 
             _context.SaveChanges();
         }
+
+
 
 
     }
