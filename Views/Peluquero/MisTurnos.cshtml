@@ -30,7 +30,18 @@
     }
     else
     {
-        <table class="table table-hover shadow-sm border rounded">
+        <!-- Filtro por estado -->
+        <div class="mb-3">
+            <label for="filtroEstado" class="form-label">Filtrar por estado:</label>
+            <select class="form-select w-auto" id="filtroEstado" onchange="filtrarTurnosPorEstado()">
+                <option value="todos">Todos</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="Confirmado">Confirmado</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>
+        </div>
+
+        <table class="table table-hover shadow-sm border rounded" id="tablaTurnos">
             <thead class="table-dark">
                 <tr>
                     <th>🧑‍💼 Cliente</th>
@@ -61,7 +72,7 @@
                         <td>@turno.Servicio.Nombre</td>
                         <td>@turno.FechaHora.ToString("dd/MM/yyyy")</td>
                         <td>@turno.FechaHora.ToString("HH:mm")</td>
-                        <td>@turno.Estado</td>
+                        <td class="estado">@turno.Estado</td>
                     </tr>
                 }
             </tbody>
@@ -73,3 +84,18 @@
     </div>
 </div>
 
+<script>
+    function filtrarTurnosPorEstado() {
+        var estadoSeleccionado = document.getElementById("filtroEstado").value;
+        var filas = document.querySelectorAll("#tablaTurnos tbody tr");
+
+        filas.forEach(function (fila) {
+            var estado = fila.querySelector(".estado").textContent.trim();
+            if (estadoSeleccionado === "todos" || estado === estadoSeleccionado) {
+                fila.style.display = "";
+            } else {
+                fila.style.display = "none";
+            }
+        });
+    }
+</script>
